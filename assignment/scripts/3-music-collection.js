@@ -34,9 +34,10 @@ showCollection(collection);
 
 function findByArtist(artistName){
   let matchingArtist = []; //create a empty array for matcthing artist.
-  for ( let album of collection){
-    if( album.artist === artistName){
-      album.artist.pop(matchingArtist);
+  for ( let i = 0; i < collection.length; i++){
+    if( artistName == collection[i].artist){
+      console.log('found');
+      matchingArtist.push(collection[i])
     }
     return console.log('artist is a match', matchingArtist);
 
